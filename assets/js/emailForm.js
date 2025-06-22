@@ -15,8 +15,11 @@ document.addEventListener("DOMContentLoaded", function() {
         emailjs.sendForm("service_t1s5dav", "template_r85pbfa", form)
             .then(function(response) {
                 console.log("E-mail enviado com sucesso!", response);
+                alert("E-mail enviado com sucesso!");
+                form.reset();
             }, function(error) {
                 console.log("Erro no envio do e-mail", error);
+                alert("Erro no envio do e-mail!");
             });
     });
 });
